@@ -1,27 +1,140 @@
 .ceil {
-    width: 300px;
-    height: 300px;
-    border: 2px solid rgb(20, 122, 100);
-    padding: 24px;
+    position: relative;
+    width: 320px;
+    height: 320px;
+    padding: 40px 30px;
+    background: #FFFFFF;
+    border-radius: 30px;    
+}
+
+.filler {
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 .ceil h2 {
-    margin-bottom: 12px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 37px;
+    color: #014747;
 }
 
 .ceil p {
+    font-weight: 300;
     font-size: 18px;
+    line-height: 28px;
+    color: #014747;
+    max-height: 112px;
+    overflow-y: hidden;
 }
 
 .list {
+    position: relative;
     width: 100%;
-    height: 50px;
+    padding: 30px;
+    background: #FFFFFF;
+    border-radius: 30px;   
 }
 
 .list h2 {
-    margin-bottom: 12px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 37px;
+    color: #014747;
 }
 
 .list p {
+    font-weight: 300;
     font-size: 18px;
+    line-height: 28px;
+    max-width: 90%;
+    color: #014747;
+}
+
+.copy {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    width: 45px;
+    height: 45px;
+    border-radius: 22.5px;
+    padding: 8px 13px;
+    background-color: #014747;
+    color: white;
+    font-size: 20px;
+    transition: .2s;
+    overflow: hidden;
+}
+
+.list .copy {
+    top: 28px;
+    bottom: unset;
+    left: unset;
+    right: 110px;
+}
+
+.list .arrow {
+    top: 0px;
+    bottom: unset;
+    right: 30px;
+}
+
+.copy:hover {
+    width: 210px;
+    transition: .2s;
+}
+
+.wideCopy {
+    width: 150px;
+    position: absolute;
+    left: 45px;
+    top: 8px;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.arrow {
+    position: absolute;
+    bottom: -10px;
+    right: 0px;
+    font-size: 28px;
+    color: #014747;
+    transition: .2s;
+}
+
+.ceil:hover .arrow {
+    transform: translateX(-10px);
+    transition: .2s;
+}
+
+.list:hover .arrow {
+    transform: translateX(10px);
+    transition: .2s;
+}
+
+@media screen and (max-width: 500px) {
+    .list {
+        padding-bottom: 100px;
+    }
+
+    .list .copy {
+        top: unset;
+        bottom: 28px;
+        left: unset;
+        right: 110px;
+    }
+    
+    .list .arrow {
+        top: unset;
+        bottom: -70px;
+        right: 30px;
+    }
+
+    .copy:hover {
+        width: 45px;
+        transition: .2s;
+    }
 }
