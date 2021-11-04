@@ -1,5 +1,5 @@
 .wrapper {
-    width: 728px;
+    width: 100%;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -7,37 +7,94 @@
 }
 
 .switchesWrapper {
+    width: 300px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    column-gap: 20px;
 }
 
 .switcher {
-    transition: .2s;
+    width: 147px;
+    height: 60px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+    column-gap: 15px;
     font-size: 24px;
     line-height: 12px;
-    height: 50px;
-    width: 50px;
     cursor: pointer;
+    transition: .2s;
+}
+
+.switcher p {
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.inputsWrapper {
+    position: relative;
+}
+
+.inputIcon {
+    position: absolute;
+    top: 16px;
+    right: 24px;
+    font-size: 20px;
+    color: #01474766;
 }
 
 .activeSwitcher {
-    background-color: rgb(20, 122, 100);
     color: white;
+    background: #014747;
+    transition: .2s;
 }
 
 .input {
-    width: 312px;
+    width: 300px;
     height: 60px;
     border: none;
     outline: none;
     padding-left: 24px;
-    font-size: 22px;
-    color: rgb(20, 122, 100);
+    font-size: 18px;
+    color: #014747;
+    border: 1px solid white;
+    border-radius: 10px;
+    transition: .2s;
 }
   
 .input::placeholder {
-    color: rgba(20, 122, 100, .5);
+    color: rgba(1, 71, 71, .4);
+    font-size: 18px;
+}
+
+.input:focus {
+    border: 1px solid #014747;
+    transition: .2s;
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+      width: 100%;
+      flex-wrap: wrap;
+      row-gap: 15px;
+    }
+  
+    .inputs_wrapper {
+      flex-wrap: wrap;
+      justify-content: center;
+      row-gap: 15px;
+    }
+
+    .input {
+        width: unset;
+    }
+
+    .switchesWrapper {
+        width: unset;
+    }
+
+    .switcher {
+        width: 116px;
+    }
 }
