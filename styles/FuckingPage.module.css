@@ -1,0 +1,118 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+}
+
+.wrapper {
+    width: 1200px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.quote {
+    width: 780px;
+    height: 350px;  
+    background: #FFFFFF;
+    border-radius: 30px;
+    padding: 50px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.linksWrapper {
+    height: 350px;  
+    width: 350px;
+    background: #FFFFFF;
+    border-radius: 30px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.linksInner {
+    width: 100%;
+    height: 100%;
+}
+
+.copyButton {
+    margin-top: 60px;
+    width: 100%;
+    height: 60px;
+    background: #014747;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 15px;
+    color: white;
+    font-size: 18px;
+    line-height: 27px;
+    cursor: pointer;
+}
+
+.linksInner canvas {
+    margin-left: calc(290px / 2 - 164px / 2);
+}
+
+.quote i {
+    font-weight: 300;
+}
+
+.fuckingNotice {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    width: 0px;
+    overflow: hidden;
+    padding: 10px 20px;
+    background: #014747;
+    color: white;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+    border-radius: 10px;
+    transition: .2s;
+    opacity: 0;
+}
+  
+.fuckingNotice p {
+    width: 250px;
+}
+  
+.showFuckingNotice {
+    width: 300px;
+    transition: .2s;
+    opacity: 1;
+}
+
+@media screen and (max-width: 1280px) {
+    .wrapper {
+        width: 728px;
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        width: 320px;
+    }
+
+    .quote {
+        width: 320px;
+        height: max-content;
+    }
+        
+    .fuckingNotice {
+        right: 10px;
+        bottom: 10px;
+    }
+}
