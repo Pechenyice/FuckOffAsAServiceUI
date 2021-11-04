@@ -1,0 +1,43 @@
+.wrapper {
+    width: 728px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.switchesWrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.switcher {
+    transition: .2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    line-height: 12px;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
+
+.activeSwitcher {
+    background-color: rgb(20, 122, 100);
+    color: white;
+}
+
+.input {
+    width: 312px;
+    height: 60px;
+    border: none;
+    outline: none;
+    padding-left: 24px;
+    font-size: 22px;
+    color: rgb(20, 122, 100);
+}
+  
+.input::placeholder {
+    color: rgba(20, 122, 100, .5);
+}
