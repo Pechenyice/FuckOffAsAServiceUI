@@ -2,7 +2,8 @@ import { ChangeEvent } from "react";
 
 export interface IFuck {
     title: string,
-    text: string
+    text: string,
+    id: number
 }
 
 export interface IFucks {
@@ -10,6 +11,9 @@ export interface IFucks {
 }
 
 export interface ICardProps {
+    showNotice: () => void,
+    href: string,
+    as: string,
     to: string,
     from: string,
     cardData: IFuck,
