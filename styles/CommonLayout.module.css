@@ -1,0 +1,16 @@
+.heading {
+    text-align: center;
+    margin: 24px 0px;
+    margin-top: 80px;
+    margin-bottom: 0px;
+    font-size: 45px;
+    line-height: 67px;
+}
+
+.headingHelper {
+    text-align: center;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 20px;
+}
