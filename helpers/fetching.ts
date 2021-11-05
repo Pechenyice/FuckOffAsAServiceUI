@@ -18,7 +18,3 @@ export async function fetchFucks(): Promise<IFuck[]> {
     }
     return results;
 }
-
-export function fetchFuck(): void {
-
-}
