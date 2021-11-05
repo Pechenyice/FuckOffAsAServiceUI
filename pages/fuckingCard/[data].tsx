@@ -16,10 +16,6 @@ export default function FuckingPage({ fuck }: { fuck: IFuck }) {
     let [text, setText] = useState(fuck.text);
     let data: string = router.query.data as string;
     useEffect(() => {
-        // if (data.split('::')[1] && data.split('::')[2]) setText(text.replace(/from/i, data.split('::')[1]).replace(/to/i, data.split('::')[2]).replace(/noun/i, data.split('::')[2]).replace(/language/i, data.split('::')[2]).replace(/company/i, data.split('::')[2]).replace(/name/i, data.split('::')[2]))
-        // else if (data.split('::')[1]) setText(text.replace(/from/i, data.split('::')[1]))
-        // else if (data.split('::')[2]) setText(text.replace(/to/i, data.split('::')[2]).replace(/noun/i, data.split('::')[2]).replace(/language/i, data.split('::')[2]).replace(/company/i, data.split('::')[2]).replace(/name/i, data.split('::')[2]))
-        // else setText(text.replace(/:from:/i, ':from:').replace(/:to:/i, ':to:').replace(/:noun:/i, ':noun:').replace(/:language:/i, ':language:').replace(/:company:/i, ':company:').replace(/:name:/i, ':name:'))
         let cardData = {
             title: '',
             text,
@@ -97,20 +93,6 @@ function getFullUrl(req = null) {
 }
 
 export async function getServerSideProps({ query }) {
-    // const data = await fetch('http://foaas.com/fucks');
-    // let fucks = await data.text();
-    // let fucksArr = fucks.split('</tr>');
-    // fucksArr.pop();
-    // let results = [];
-    // for (let f of fucksArr) {
-    //     let unTrimmedStr = f.split('</td>')[1]?.split('form')[1].trim().split(':from').join(`:from:`).split(':to').join(`:to:`).split(':company').join(`:company:`).split(':name').join(`:name:`).split('');
-    //     unTrimmedStr.pop();
-    //     unTrimmedStr.shift();
-    //     results.push({
-    //         title: f.split('</td>')[0].split('/')[1],
-    //         text: unTrimmedStr.join('')
-    //     });
-    // }
     let results = await fetchFucks();
     return {
         props: {
